@@ -1,0 +1,113 @@
+POST http://127.0.0.1:8000/add_turf/
+Content-Type: application/json
+
+{
+    "turf_name": "Power Play Park",
+    "location": "kochi",
+    "price": 1000,
+    "description": "Football turf",
+    "status": 0
+}
+
+###
+GET http://127.0.0.1:8000/view_turf/
+
+###
+PUT http://127.0.0.1:8000/update_turf/1/
+Content-Type: application/json
+
+{
+    "turf_name": "Royal Football Turf",
+    "location": "Ernakulam",
+    "price": 1500,
+    "description": "Premium football turf",
+    "status": 1
+}
+
+###
+DELETE http://127.0.0.1:8000/delete_turf/6/
+
+###
+POST http://127.0.0.1:8000/add_booking/
+Content-Type: application/json
+
+{
+    "turf": 1,
+    "customer_name": "Kichu",
+    "booking_date": "2026-11-05",
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "total_amount": 1000,
+    "status": 0
+}
+
+###
+GET http://127.0.0.1:8000/view_booking/
+
+###
+PUT http://127.0.0.1:8000/cancel_booking/3/
+
+###
+GET http://127.0.0.1:8000/single_booking/2/
+
+###
+POST http://127.0.0.1:8000/register_user/
+Content-Type: application/json
+
+{
+    "username": "Appu",
+    "email": "appu@gmail.com",
+    "password": "appu123"
+}
+
+###
+POST http://127.0.0.1:8000/login_user/
+Content-Type: application/json
+
+{
+    "username": "anu",
+    "password": "anu"
+}
+
+###
+POST http://127.0.0.1:8000/login_user/
+Content-Type: application/json
+
+{
+    "username": "anu",
+    "password": "anu123"
+}
+
+
+###
+POST http://127.0.0.1:8000/add_booking/
+Content-Type: application/json
+Authorization: Token d05400fc6228873673d989c76ee7a74996f4004d
+
+{
+    "turf": 1,
+    "customer_name": "Anu",
+    "booking_date": "2026-11-06",
+    "start_time": "10:00:00",
+    "end_time": "11:00:00",
+    "total_amount": 1000,
+    "status": 0
+}
+
+###
+POST http://127.0.0.1:8000/login_user/
+Content-Type: application/json
+
+{
+    "username": "anu",
+    "password": "anu123"
+}
+
+###
+GET http://127.0.0.1:8000/view_booking/
+Authorization: Token d05400fc6228873673d989c76ee7a74996f4004d
+
+
+###
+PUT http://127.0.0.1:8000/cancel_booking/1/
+Authorization: Token d05400fc6228873673d989c76ee7a74996f4004d
